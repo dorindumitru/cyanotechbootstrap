@@ -22,6 +22,37 @@ export default function Acasa(props) {
         darkMode={props.darkMode}
         list={CarouselAcasaList}
       />
+      <div className='h3 text-center text-white pt-3'>
+        {props.language === "English"
+          ? "Quality products and services"
+          : props.language === "Romanian"
+          ? "Produse și servicii de calitate"
+          : props.language === "German" &&
+            "Qualitätsprodukte und Dienstleistungen"}
+      </div>
+      <div className='h3 text-center pb-5'>
+        {props.language === "English" && (
+          <a
+            href='tel://+40727018165'
+            style={{ textDecoration: "inherit", color: "cyan" }}>
+            Call us 24/7
+          </a>
+        )}
+        {props.language === "Romanian" && (
+          <a
+            href='tel://+40727018165'
+            style={{ textDecoration: "inherit", color: "cyan" }}>
+            Sunați-ne 24/7
+          </a>
+        )}
+        {props.language === "German" && (
+          <a
+            href='tel://+40727018165'
+            style={{ textDecoration: "inherit", color: "cyan" }}>
+            Rufen Sie uns rund um die Uhr an
+          </a>
+        )}
+      </div>
     </div>
   );
 }

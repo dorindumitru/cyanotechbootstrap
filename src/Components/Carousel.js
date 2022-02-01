@@ -21,18 +21,29 @@ export default function CyanotechCarousel(props) {
             <div className='d-flex flex-column px-5 py-5 mx-auto my-auto flex-md-row justify-content-center align-items-center'>
               <img className='w-50 d-flex' src={item.img} alt='slide' />
               <div className='d-flex w-sm-50 px-5 text-center flex-column justify-content-center align-content-center'>
-                <h5 className='text-info'>{item.title}</h5>
-                <p className='text-info'>
+                <h5
+                  className={
+                    props.darkMode === "Dark" ? "text-light" : "text-dark"
+                  }>
+                  {item.title}
+                </h5>
+                <p
+                  className={
+                    props.darkMode === "Dark" ? "text-light" : "text-dark"
+                  }>
                   {props.language === "English"
                     ? item.statsEN
                     : props.language === "Romanian"
                     ? item.statsRO
                     : props.language === "German" && item.statsDE}
                 </p>
-                <Button variant='outline-info' size='md' className='mx-auto'>
+                <Button
+                  variant={props.darkMode === "Dark" ? "light" : "dark"}
+                  size='md'
+                  className='mx-auto'>
                   <Link
                     to={item.galerie}
-                    style={{ textDecoration: "none", color: "white" }}>
+                    style={{ textDecoration: "inherit", color: "inherit" }}>
                     {props.language === "English"
                       ? "Gallery"
                       : props.language === "Romanian"
