@@ -15,7 +15,7 @@ const CarouselAcasaList = [
       "Das CyanoClean Pack ist ein tragbares Laser-Reinigungssystem zum einfachen und schnellen Entfernen von Rost, das überall eingesetzt werden kann. Es verfügt über ein Bedienfeld, an dem die Reinigungsparameter eingestellt werden, und eine Pistole, die den Laserstrahl auslöst und führt, um die Reinigung zu starten. Das System eignet sich außerdem gut für lokale Verwaltungen, die Statuen, Gebäude oder Brücken usw. pflegen wollen.",
     detalii: "/CyanoClean",
     galerie: "/galerie-foto",
-    logo: CyanoCleanPack,
+    img: CyanoCleanPack,
   },
   {
     id: "2",
@@ -28,7 +28,7 @@ const CarouselAcasaList = [
       "Das CyanoMark Mini ist ein sehr leichtes Laser-Markiersystem, das Markier- und Gravierfunktionen für kleine Werkstätten bietet, oder wenn Markierungen an verschiedenen Standorten durchgeführt werden müssen.",
     detalii: "/CyanoMark",
     galerie: "/galerie-foto",
-    logo: CyanoMarkMini,
+    img: CyanoMarkMini,
   },
   {
     id: "3",
@@ -41,7 +41,7 @@ const CarouselAcasaList = [
       "Das CyanoClean Laser-Reinigungsgerät ist ein Gerät zum Reinigen metallischer Oberflächen ohne Chemikalien, Pulver oder Wasser, das nur den Rost entfernt, ohne die gereinigte Oberfläche anzugreifen. Es ist wahrscheinlich die einfachste Art, Rost und Rückstände von verschiedenen Oberflächen zu entfernen.",
     detalii: "/CyanoClean",
     galerie: "/galerie-foto",
-    logo: CyanoClean100,
+    img: CyanoClean100,
   },
   {
     id: "4",
@@ -54,7 +54,7 @@ const CarouselAcasaList = [
       "CyanoMark Portable is a very versatile laser marking system equipped with a distance fixture for focusing and a button for manual triggering. This version of laser marker allows the user to mark where it is not usually possible due to the size of the marked part. It can also be used in a fixed position with the aid of the detachable lift which helps obtain a good focus.",
     detalii: "/CyanoMark",
     galerie: "/galerie-foto",
-    logo: CyanoMarkPortable,
+    img: CyanoMarkPortable,
   },
 ];
 
