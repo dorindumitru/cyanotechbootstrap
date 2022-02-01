@@ -59,8 +59,8 @@ function App() {
           onClick={toggleDark}
           className={
             darkMode === "Dark"
-              ? "btn btn-sm btn-outline-light"
-              : "btn btn-sm btn-outline-dark"
+              ? "btn btn-sm me-1 btn-outline-light"
+              : "btn btn-sm me-1 btn-outline-dark"
           }>
           {darkMode === "Dark"
             ? language === "English"
@@ -74,7 +74,7 @@ function App() {
             ? "Întunecat"
             : language === "German" && "Dunkel"}
         </Button>
-        <DropdownButton size='sm' title={language}>
+        <DropdownButton size='sm' title={language} className='ms-1'>
           <Dropdown.Item onClick={() => setLanguage("English")}>
             English
           </Dropdown.Item>
