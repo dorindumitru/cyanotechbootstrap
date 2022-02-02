@@ -4,6 +4,10 @@ import CarouselAcasaList from "../Lists/CarouselAcasaList";
 import InfoSectionList from "../Lists/InfoSectionList";
 import InfoSectionCard from "../Components/InfoSectionCard";
 import { Container } from "react-bootstrap";
+import HoloMarking from "../Resources/HoloMarking.mp4";
+import AcasaInfoComponentList1 from "../Lists/AcasaInfoComponentList1";
+import InfoSection from "../Components/InfoSection";
+import IconSet from "../Components/IconSet";
 
 export default function Acasa(props) {
   return (
@@ -88,8 +92,8 @@ export default function Acasa(props) {
       <p
         className={
           props.darkMode === "Dark"
-            ? "text-center bg-dark text-light my-1"
-            : "text-center bg-light text-dark my-1"
+            ? "text-center bg-dark text-light my-3"
+            : "text-center bg-light text-dark my-3"
         }>
         {props.language === "English"
           ? "If you are searching for laser equipment we would like to have a discussion and support you with our consultancy."
@@ -98,6 +102,68 @@ export default function Acasa(props) {
           : props.language === "German" &&
             "Wenn Sie auf der Suche nach Lasertechnologie sind, sprechen wir gerne mit Ihnen und bieten Ihnen unsere Beratung an."}
       </p>
+
+      <Container>
+        <InfoSection
+          key={AcasaInfoComponentList1[0].id}
+          darkMode={props.darkMode}
+          language={props.language}
+          title={
+            props.language === "English"
+              ? AcasaInfoComponentList1[0].titleEN
+              : props.language === "Romanian"
+              ? AcasaInfoComponentList1[0].titleRO
+              : props.language === "German" &&
+                AcasaInfoComponentList1[0].titleDE
+          }
+          icons={AcasaInfoComponentList1[0].icons}
+          text={
+            props.language === "English"
+              ? AcasaInfoComponentList1[0].textEN
+              : props.language === "Romanian"
+              ? AcasaInfoComponentList1[0].textRO
+              : props.language === "German" && AcasaInfoComponentList1[0].textDE
+          }
+          img={AcasaInfoComponentList1[0].img}
+        />
+      </Container>
+      <Container>
+        <IconSet language={props.language} darkMode={props.darkMode} />
+      </Container>
+      <div id='VideoSection'>
+        <video
+          id='background-video'
+          autoPlay
+          loop
+          muted
+          style={{ width: "100%", height: "50vh", objectFit: "cover" }}>
+          <source src={HoloMarking} type='video/mp4' />
+        </video>
+      </div>
+      <Container>
+        <InfoSection
+          key={AcasaInfoComponentList1[0].id}
+          darkMode={props.darkMode}
+          language={props.language}
+          title={
+            props.language === "English"
+              ? AcasaInfoComponentList1[0].titleEN
+              : props.language === "Romanian"
+              ? AcasaInfoComponentList1[0].titleRO
+              : props.language === "German" &&
+                AcasaInfoComponentList1[0].titleDE
+          }
+          icons={AcasaInfoComponentList1[0].icons}
+          text={
+            props.language === "English"
+              ? AcasaInfoComponentList1[0].textEN
+              : props.language === "Romanian"
+              ? AcasaInfoComponentList1[0].textRO
+              : props.language === "German" && AcasaInfoComponentList1[0].textDE
+          }
+          img={AcasaInfoComponentList1[0].img}
+        />
+      </Container>
     </div>
   );
 }
