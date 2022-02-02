@@ -86,7 +86,7 @@ function App() {
           </Dropdown.Item>
         </DropdownButton>
         <Navbar.Toggle />
-        <Navbar.Collapse className='justify-content-end'>
+        <Navbar.Collapse className='justify-content-end pe-3'>
           <Nav className='ml-auto'>
             <Nav.Link as={Link} to='/' style={{ textAlign: "right" }}>
               {language === "English"

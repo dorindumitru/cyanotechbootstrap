@@ -15,7 +15,7 @@ const InfoSection = [
       "Oferim garanție 2 ani pentru produsele achiziționate de la noi și unitate înlocuitoare* în caz de avarie.",
     textDE:
       "Wir bieten 2 Jahre Garantie auf unsere Produkte sowie bei Beschädigung Ersatzgeräte*.",
-    logo: garantie,
+    img: garantie,
   },
   {
     id: "2",
@@ -28,7 +28,7 @@ const InfoSection = [
       "Cu noi beneficiați de cel mai bun preț din piață pentru sisteme de gravare laser și curățătoare laser.",
     textDE:
       "Mit uns profitieren Sie vom besten Preis auf dem Markt für Lasertechnologie.",
-    logo: preturiReduse,
+    img: preturiReduse,
   },
   {
     id: "3",
@@ -39,7 +39,7 @@ const InfoSection = [
     textRO:
       "Toate produsele găsite în portofoliul nostru beneficiază de livrare gratuită.",
     textDE: "Alle bei uns gekauften Produkte werden kostenlos versandt.",
-    logo: livrareGratuite,
+    img: livrareGratuite,
   },
   {
     id: "4",
@@ -52,7 +52,7 @@ const InfoSection = [
       "Oferim consultanță clientilor noștri pentru a alege cea mai bună soluție pentru procesul lor și oferim suport tehnic permanent.",
     textDE:
       "Wir beraten unsere Kunden, damit sie die beste Lösung für ihr Projekt auswählen können, und bieten fortwährenden technischen Support.",
-    logo: consultanta,
+    img: consultanta,
   },
 ];
 
