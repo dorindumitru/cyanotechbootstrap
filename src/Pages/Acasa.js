@@ -6,6 +6,7 @@ import InfoSectionCard from "../Components/InfoSectionCard";
 import { Container } from "react-bootstrap";
 import HoloMarking from "../Resources/HoloMarking.mp4";
 import AcasaInfoComponentList1 from "../Lists/AcasaInfoComponentList1";
+import AcasaInfoComponentList2 from "../Lists/AcasaInfoComponentList2";
 import InfoSection from "../Components/InfoSection";
 import IconSet from "../Components/IconSet";
 
@@ -142,26 +143,35 @@ export default function Acasa(props) {
       </div>
       <Container>
         <InfoSection
-          key={AcasaInfoComponentList1[0].id}
+          key={AcasaInfoComponentList2[0].id}
           darkMode={props.darkMode}
           language={props.language}
           title={
             props.language === "English"
-              ? AcasaInfoComponentList1[0].titleEN
+              ? AcasaInfoComponentList2[0].titleEN
               : props.language === "Romanian"
-              ? AcasaInfoComponentList1[0].titleRO
+              ? AcasaInfoComponentList2[0].titleRO
               : props.language === "German" &&
-                AcasaInfoComponentList1[0].titleDE
+                AcasaInfoComponentList2[0].titleDE
           }
-          icons={AcasaInfoComponentList1[0].icons}
+          icons={AcasaInfoComponentList2[0].icons}
           text={
             props.language === "English"
-              ? AcasaInfoComponentList1[0].textEN
+              ? AcasaInfoComponentList2[0].textEN
               : props.language === "Romanian"
-              ? AcasaInfoComponentList1[0].textRO
-              : props.language === "German" && AcasaInfoComponentList1[0].textDE
+              ? AcasaInfoComponentList2[0].textRO
+              : props.language === "German" && AcasaInfoComponentList2[0].textDE
           }
-          img={AcasaInfoComponentList1[0].img}
+          img={AcasaInfoComponentList2[0].img}
+          button={
+            props.language === "English"
+              ? AcasaInfoComponentList2[0].detailsEN
+              : props.language === "Romanian"
+              ? AcasaInfoComponentList2[0].detailsRO
+              : props.language === "German" &&
+                AcasaInfoComponentList2[0].detailsDE
+          }
+          buttonLink='/despre'
         />
       </Container>
     </div>

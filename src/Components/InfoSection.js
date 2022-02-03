@@ -1,5 +1,6 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const InfoSection = (props) => {
   return (
@@ -26,6 +27,18 @@ const InfoSection = (props) => {
           ))}
         </div>
         <Card.Text className='p-2'>{props.text}</Card.Text>
+        {props.button && (
+          <Button
+            variant={props.darkMode === "Dark" ? "dark" : "light"}
+            size='md'
+            className='mx-auto'>
+            <Link
+              to={props.buttonLink}
+              style={{ textDecoration: "inherit", color: "inherit" }}>
+              {props.button}
+            </Link>
+          </Button>
+        )}
       </Card>
     </div>
   );
