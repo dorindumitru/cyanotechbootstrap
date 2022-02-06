@@ -11,12 +11,12 @@ const ApplicabilityEN = () => {
       <p>
         Electronic components: resistors, chips, pcbs, keyboards, connectors
       </p>
-      <p>Tools: working utilities, milling tools, identifying plaques.</p>
+      <p>Tools: workimg utilities, millimg tools, identifyimg plaques.</p>
       <p>
-        Automotive industry: pistons, piston rings, cylinders, metallic and
-        plastic components, bearings, etc.
+        Automotive industry: pistons, piston rimgs, cylinders, metallic and
+        plastic components, bearimgs, etc.
       </p>
-      <p>Mechanical parts: gears, bearings, engines, etc.</p>
+      <p>Mechanical parts: gears, bearimgs, engines, etc.</p>
       <p>Jewelry: gold, silver, stainless steel, tin.</p>
       <p>Recipients: PET bottles, produce bags, etc.</p>
     </div>
@@ -51,7 +51,7 @@ const ApplicabilityDE = () => {
       </p>
       <p>Werkzeuge: Arbeitshilfsmittel, Fräswerkzeuge, Typenschilder.</p>
       <p>
-        Automobilindustrie: Kolben, Kolbenringe, Zylinder, Metall- und
+        Automobilindustrie: Kolben, Kolbenrimge, Zylinder, Metall- und
         Kunststoffteile, Lager usw.
       </p>
       <p>Mechanische Teile: Zahnräder, Lager, Motoren usw.</p>
@@ -108,7 +108,7 @@ const ApplicableMetalsDE = () => {
       <p>Nichtmetalle: Kunststoff, Gummi, Harz, Karton usw.</p>
       <h4>Vorteile:</h4>
       <p>
-        FuE: Professionelles Design und Optimierung, um die Größe zu verringern
+        FuE: Professionelles Design und Optimierung, um die Größe zu verrimgern
         und die Tragbarkeit zu erhalten. Garantie: 2 Jahre mit fortwährendem
         technischem Support.
       </p>
@@ -119,30 +119,31 @@ const ApplicableMetalsDE = () => {
 const CyanoMarkInfoList = [
   {
     id: "1",
-    titleEN: "What is laser marking?",
+
+    titleEN: "What is laser markimg?",
     titleRO: "Ce este marcarea laser?",
     titleDE: "Was ist Lasermarkierung?",
     textEN:
-      "Laser marking is the phenomenon through which a system concentrates a light beam in order to mark or engrave a part or a material. CyanoMark is a 2D laser marker which can mark and engrave parts or surfaces. The difference between marking and engraving consists in the depth of penetration of the material. Marking is a slight discoloration of the surface and engraving is the removal of a layer of material.",
+      "Laser markimg is the phenomenon through which a system concentrates a light beam in order to mark or engrave a part or a material. CyanoMark is a 2D laser marker which can mark and engrave parts or surfaces. The difference between markimg and engravimg consists in the depth of penetration of the material. Markimg is a slight discoloration of the surface and engravimg is the removal of a layer of material.",
     textRO:
       "Marcarea laser este fenomenul prin care un sistem concentrează o rază de lumină pentru a marca sau grava o piesă sau un material. CyanoMark este un sistem laser 2D ce poate marca si grava piese și suprafețe. Diferența dintre marcare și gravare constă în adâncimea de penetrare a materialului. Marcarea reprezintă o decolorare superficială a suprafeței iar gravarea reprezintă înlăturarea unui strat de material.",
     textDE:
-      "Die Lasermarkierung ist ein Vorgang, bei dem eine System einen Lichtstrahl konzentriert, um ein Teil oder ein Material zu markieren oder zu gravieren. CyanoMark ist ein 2D-Lasermarkierer, der Teile oder Oberflächen markieren und gravieren kann. Der Unterschied zwischen Markieren und Gravieren besteht in der Eindringtiefe in das Material. Markieren ist eine geringfügige Verfärbung der Oberfläche und Gravieren ist das Entfernen einer Schicht des Materials.",
-    logo: CyanoMarkPro50,
+      "Die Lasermarkierung ist ein Vorgang, bei dem eine System einen Lichtstrahl konzentriert, um ein Teil oder ein Material zu markieren oder zu gravieren. CyanoMark ist ein 2D-Lasermarkierer, der Teile oder Oberflächen markieren und gravieren kann. Der Unterschied zwischen Markieren und Gravieren besteht in der Eindrimgtiefe in das Material. Markieren ist eine gerimgfügige Verfärbung der Oberfläche und Gravieren ist das Entfernen einer Schicht des Materials.",
+    img: CyanoMarkPro50,
   },
   {
     id: "2",
+    class: "d-flex flex-column-reverse flex-lg-row-reverse py-3",
     titleEN: "Why use a laser marker?",
     titleRO: "De ce să folosim un marcator laser?",
     titleDE: "Warum einen Lasermarkierer verwenden?",
     textEN:
-      "Laser marking is a very resistant type of marking which withstands the test of time. It is a permanent marking made with the aid of numeric control which offers a high degree of precision and quality. Marking can be done manually and automatically, the system being adaptable to the production line, it being able to connect to a PLC to receive the information which must be marked or to trigger the marking.",
+      "Laser markimg is a very resistant type of markimg which withstands the test of time. It is a permanent markimg made with the aid of numeric control which offers a high degree of precision and quality. Markimg can be done manually and automatically, the system beimg adaptable to the production line, it beimg able to connect to a PLC to receive the information which must be marked or to trigger the markimg.",
     textRO:
       "Marcarea laser este un tip foarte rezistent de marcare ce rezistă testului timpului. Este o marcare permanentă realizată cu ajutorul controlului numeric ce oferă un grad înalt de precizie si calitate. Seria CyanoWeld marchează cu precizie ±5μ și viteză de până la 14000mm/s. Marcarea se poate face manual sau automat, sistemul fiind adaptabil și liniei de producție, acesta putând fi conectat la PLC pentru a primi informația ce trebuie marcată sau a declanșa marcarea.",
     textDE:
       "Lasermarkierung ist eine äußerst widerstandsfähige Art des Markierens, die die Zeit überdauert. Es handelt sich um eine permanente Markierung, die mittels einer numerischen Steuerung aufgebracht wird, wodurch ein hoher Grad an Präzision und Qualität erreicht wird. Die Markierung kann manuell oder automatisch erfolgen. Das System kann an die Produktionslinie angepasst und mit einer SPS verbunden werden, um die zu markierenden Informationen zu empfangen oder die Markierung auszulösen.",
-    style: { flexDirection: "row-reverse" },
-    logo: CyanoMarkPro30,
+    img: CyanoMarkPro30,
   },
   {
     id: "3",
@@ -152,7 +153,7 @@ const CyanoMarkInfoList = [
     textEN: <ApplicabilityEN />,
     textRO: <ApplicabilityRO />,
     textDE: <ApplicabilityDE />,
-    logo: CyanoMarkMini,
+    img: CyanoMarkMini,
   },
   {
     id: "4",
@@ -160,7 +161,7 @@ const CyanoMarkInfoList = [
     textRO: <ApplicableMetalsRO />,
     textDE: <ApplicableMetalsDE />,
     style: { flexDirection: "row-reverse" },
-    logo: CyanoMarkPortable,
+    img: CyanoMarkPortable,
   },
 ];
 

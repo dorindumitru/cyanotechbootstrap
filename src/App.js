@@ -23,10 +23,10 @@ import React, { useState } from "react";
 
 function App() {
   const [language, setLanguage] = useState("English");
-  const [darkMode, setDarkMode] = useState("Dark");
+  const [darkmode, setdarkmode] = useState("Dark");
 
   function toggleDark() {
-    darkMode === "Dark" ? setDarkMode("Light") : setDarkMode("Dark");
+    darkmode === "Dark" ? setdarkmode("Light") : setdarkmode("Dark");
   }
 
   return (
@@ -40,29 +40,29 @@ function App() {
         }}
         collapseOnSelect
         expand='md'
-        bg={darkMode === "Dark" ? "dark" : "light"}
-        variant={darkMode === "Dark" ? "dark" : "light"}
+        bg={darkmode === "Dark" ? "dark" : "light"}
+        variant={darkmode === "Dark" ? "dark" : "light"}
         sticky='top'>
         <Navbar.Brand>
           <Nav.Link
             as={Link}
             to='/'
-            style={{ color: `${darkMode === "Dark" ? "white" : "black"}` }}>
+            style={{ color: `${darkmode === "Dark" ? "white" : "black"}` }}>
             <img src={logo} alt='Company Logo' height='40px' width='40px' />
             Cyanotech
           </Nav.Link>
         </Navbar.Brand>
         <Button
           type='button'
-          bg={darkMode === "Dark" ? "dark" : "light"}
-          variant={darkMode === "Dark" ? "dark" : "light"}
+          bg={darkmode === "Dark" ? "dark" : "light"}
+          variant={darkmode === "Dark" ? "dark" : "light"}
           onClick={toggleDark}
           className={
-            darkMode === "Dark"
+            darkmode === "Dark"
               ? "btn btn-sm me-1 btn-outline-light"
               : "btn btn-sm me-1 btn-outline-dark"
           }>
-          {darkMode === "Dark"
+          {darkmode === "Dark"
             ? language === "English"
               ? "Light"
               : language === "Romanian"
@@ -103,7 +103,7 @@ function App() {
                 : language === "German" && "Über uns"}
             </Nav.Link>
             <NavDropdown
-              menuVariant={darkMode === "Dark" ? "dark" : "light"}
+              menuVariant={darkmode === "Dark" ? "dark" : "light"}
               title={
                 language === "English"
                   ? "Products"
@@ -165,39 +165,39 @@ function App() {
         <Route
           exact
           path='/'
-          element={<Acasa language={language} darkMode={darkMode} />}
+          element={<Acasa language={language} darkmode={darkmode} />}
         />
         <Route
           path='despre'
-          element={<Despre language={language} darkMode={darkMode} />}
+          element={<Despre language={language} darkmode={darkmode} />}
         />
         <Route
           path='produse'
-          element={<Produse language={language} darkMode={darkMode} />}
+          element={<Produse language={language} darkmode={darkmode} />}
         />
         <Route
           path='cyanomark'
-          element={<CyanoMark language={language} darkMode={darkMode} />}
+          element={<CyanoMark language={language} darkmode={darkmode} />}
         />
         <Route
           path='cyanoclean'
-          element={<CyanoClean language={language} darkMode={darkMode} />}
+          element={<CyanoClean language={language} darkmode={darkmode} />}
         />
         <Route
           path='cyanoweld'
-          element={<CyanoWeld language={language} darkMode={darkMode} />}
+          element={<CyanoWeld language={language} darkmode={darkmode} />}
         />
         <Route
           path='galerie-foto'
-          element={<GalerieFoto language={language} darkMode={darkMode} />}
+          element={<GalerieFoto language={language} darkmode={darkmode} />}
         />
         <Route
           path='galerie-video'
-          element={<GalerieVideo language={language} darkMode={darkMode} />}
+          element={<GalerieVideo language={language} darkmode={darkmode} />}
         />
         <Route
           path='contact'
-          element={<Contact language={language} darkMode={darkMode} />}
+          element={<Contact language={language} darkmode={darkmode} />}
         />
       </Routes>
     </Router>

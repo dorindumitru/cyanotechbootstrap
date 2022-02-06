@@ -625,7 +625,7 @@ const CyanoMarkList = [
     statsRO: <CyanoMarkPro20RO />,
     statsDE: <CyanoMarkPro20DE />,
     galerie: "/galerie-foto",
-    logo: CyanoMark30,
+    img: CyanoMark30,
   },
   {
     id: "2",
@@ -634,7 +634,7 @@ const CyanoMarkList = [
     statsRO: <CyanoMarkPro30RO />,
     statsDE: <CyanoMarkPro30DE />,
     galerie: "/galerie-foto",
-    logo: CyanoMark30,
+    img: CyanoMark30,
   },
   {
     id: "3",
@@ -643,7 +643,7 @@ const CyanoMarkList = [
     statsRO: <CyanoMarkPro50RO />,
     statsDE: <CyanoMarkPro50DE />,
     galerie: "/galerie-foto",
-    logo: CyanoMark30,
+    img: CyanoMark30,
   },
   {
     id: "4",
@@ -652,7 +652,7 @@ const CyanoMarkList = [
     statsRO: <CyanoMarkPro100RO />,
     statsDE: <CyanoMarkPro100DE />,
     galerie: "/galerie-foto",
-    logo: CyanoMark100,
+    img: CyanoMark100,
   },
   {
     id: "5",
@@ -661,7 +661,7 @@ const CyanoMarkList = [
     statsRO: <CyanoMark20mRO />,
     statsDE: <CyanoMark20mDE />,
     galerie: "/galerie-foto",
-    logo: CyanoMarkMini,
+    img: CyanoMarkMini,
   },
   {
     id: "6",
@@ -670,7 +670,7 @@ const CyanoMarkList = [
     statsRO: <CyanoMark30mRO />,
     statsDE: <CyanoMark30mDE />,
     galerie: "/galerie-foto",
-    logo: CyanoMarkMini,
+    img: CyanoMarkMini,
   },
   {
     id: "7",
@@ -679,7 +679,7 @@ const CyanoMarkList = [
     statsRO: <CyanoMark20pRO />,
     statsDE: <CyanoMark20pDE />,
     galerie: "/galerie-foto",
-    logo: CyanoMarkPortable,
+    img: CyanoMarkPortable,
   },
   {
     id: "8",
@@ -688,7 +688,7 @@ const CyanoMarkList = [
     statsRO: <CyanoMark30pRO />,
     statsDE: <CyanoMark30pDE />,
     galerie: "/galerie-foto",
-    logo: CyanoMarkPortable,
+    img: CyanoMarkPortable,
   },
   {
     id: "9",
@@ -697,7 +697,7 @@ const CyanoMarkList = [
     statsRO: <CyanoMark50pRO />,
     statsDE: <CyanoMark50pDE />,
     galerie: "/galerie-foto",
-    logo: CyanoMarkPortable,
+    img: CyanoMarkPortable,
   },
 ];
 

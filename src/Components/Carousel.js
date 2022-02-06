@@ -1,18 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { Container, Carousel, Button, CarouselItem } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
-// Fix dark light mode colors
 
 export default function CyanotechCarousel(props) {
   return (
     <Container>
       <Carousel
         as='div'
-        activeIndex={props.key}
+        // activeIndex={props.key}
         fade
-        variant={props.darkMode === "Dark" ? "light" : "dark"}>
+        variant={props.darkmode === "Dark" ? "light" : "dark"}>
         {props.list.map((item) => (
           <CarouselItem
             interval={10000}
@@ -23,22 +21,22 @@ export default function CyanotechCarousel(props) {
               <div className='d-flex w-sm-50 px-5 text-center flex-column justify-content-center align-content-center'>
                 <h5
                   className={
-                    props.darkMode === "Dark" ? "text-light" : "text-dark"
+                    props.darkmode === "Dark" ? "text-light" : "text-dark"
                   }>
                   {item.title}
                 </h5>
-                <p
+                <div
                   className={
-                    props.darkMode === "Dark" ? "text-light" : "text-dark"
+                    props.darkmode === "Dark" ? "text-light" : "text-dark"
                   }>
                   {props.language === "English"
                     ? item.statsEN
                     : props.language === "Romanian"
                     ? item.statsRO
                     : props.language === "German" && item.statsDE}
-                </p>
+                </div>
                 <Button
-                  variant={props.darkMode === "Dark" ? "light" : "dark"}
+                  variant={props.darkmode === "Dark" ? "light" : "dark"}
                   size='md'
                   className='mx-auto'>
                   <Link

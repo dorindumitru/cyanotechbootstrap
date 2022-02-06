@@ -9,10 +9,11 @@ import AcasaInfoComponentList1 from "../Lists/AcasaInfoComponentList1";
 import AcasaInfoComponentList2 from "../Lists/AcasaInfoComponentList2";
 import InfoSection from "../Components/InfoSection";
 import IconSet from "../Components/IconSet";
+import Footer from "../Components/Footer";
 
 export default function Acasa(props) {
   return (
-    <div className={props.darkMode === "Dark" ? "bg-dark" : "bg-light"}>
+    <div className={props.darkmode === "Dark" ? "bg-dark" : "bg-light"}>
       <div style={{ color: "white", textAlign: "center" }}>
         <h2>Cyanotech</h2>
         <p>
@@ -26,12 +27,12 @@ export default function Acasa(props) {
       </div>
       <Carousel
         language={props.language}
-        darkMode={props.darkMode}
+        darkmode={props.darkmode}
         list={CarouselAcasaList}
       />
       <div
         className={
-          props.darkMode === "Dark"
+          props.darkmode === "Dark"
             ? "h3 text-center text-white pt-3"
             : "h3 text-center text-dark pt-3"
         }>
@@ -71,7 +72,7 @@ export default function Acasa(props) {
         {InfoSectionList.map((item) => (
           <InfoSectionCard
             key={item.id}
-            darkMode={props.darkMode}
+            darkmode={props.darkmode}
             img={item.img}
             title={
               props.language === "English"
@@ -92,7 +93,7 @@ export default function Acasa(props) {
       </Container>
       <p
         className={
-          props.darkMode === "Dark"
+          props.darkmode === "Dark"
             ? "text-center bg-dark text-light my-3"
             : "text-center bg-light text-dark my-3"
         }>
@@ -107,7 +108,7 @@ export default function Acasa(props) {
       <Container>
         <InfoSection
           key={AcasaInfoComponentList1[0].id}
-          darkMode={props.darkMode}
+          darkmode={props.darkmode}
           language={props.language}
           title={
             props.language === "English"
@@ -129,7 +130,7 @@ export default function Acasa(props) {
         />
       </Container>
       <Container>
-        <IconSet language={props.language} darkMode={props.darkMode} />
+        <IconSet language={props.language} darkmode={props.darkmode} />
       </Container>
       <div id='VideoSection'>
         <video
@@ -144,7 +145,7 @@ export default function Acasa(props) {
       <Container>
         <InfoSection
           key={AcasaInfoComponentList2[0].id}
-          darkMode={props.darkMode}
+          darkmode={props.darkmode}
           language={props.language}
           title={
             props.language === "English"
@@ -173,6 +174,9 @@ export default function Acasa(props) {
           }
           buttonLink='/despre'
         />
+      </Container>
+      <Container>
+        <Footer language={props.language} darkmode={props.darkmode} />
       </Container>
     </div>
   );
