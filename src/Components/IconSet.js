@@ -11,14 +11,14 @@ export default function IconSet(props) {
       className='d-flex text-center py-3 align-items-center justify-content-center flex-column flex-sm-row'>
       <div
         className={
-          props.darkMode === "Dark"
+          props.darkmode === "Dark"
             ? "w-50 h100 bg-light rounded pt-2 d-flex flex-column align-items-center"
             : "w-50 h100 bg-dark rounded pt-2 d-flex flex-column align-items-center"
         }>
         <img src={eco} alt='eco' className='w-50 rounded' />
         <p
           className={
-            props.darkMode === "Dark"
+            props.darkmode === "Dark"
               ? "text-dark font-weight-bold"
               : "text-light font-weight-bold"
           }>
@@ -31,14 +31,14 @@ export default function IconSet(props) {
       </div>
       <div
         className={
-          props.darkMode === "Dark"
+          props.darkmode === "Dark"
             ? "w-50 h100 bg-light rounded pt-2 d-flex flex-column align-items-center"
             : "w-50 h100 bg-dark rounded pt-2 d-flex flex-column align-items-center"
         }>
         <img src={faraReziduri} alt='fara reziduri' className='w-50' />
         <p
           className={
-            props.darkMode === "Dark"
+            props.darkmode === "Dark"
               ? "text-dark font-weight-bold"
               : "text-light font-weight-bold"
           }>
@@ -51,14 +51,14 @@ export default function IconSet(props) {
       </div>
       <div
         className={
-          props.darkMode === "Dark"
+          props.darkmode === "Dark"
             ? "w-50 h100 bg-light rounded pt-2 d-flex flex-column align-items-center"
             : "w-50 h100 bg-dark rounded pt-2 d-flex flex-column align-items-center"
         }>
         <img src={costuriReduse} alt='costuri reduse' className='w-50' />
         <p
           className={
-            props.darkMode === "Dark"
+            props.darkmode === "Dark"
               ? "text-dark font-weight-bold"
               : "text-light font-weight-bold"
           }>
@@ -71,14 +71,14 @@ export default function IconSet(props) {
       </div>
       <div
         className={
-          props.darkMode === "Dark"
+          props.darkmode === "Dark"
             ? "w-50 h100 bg-light rounded pt-2 d-flex flex-column align-items-center"
             : "w-50 h100 bg-dark rounded pt-2 d-flex flex-column align-items-center"
         }>
         <img src={faraConsumabile} alt='fara consumabile' className='w-50' />
         <p
           className={
-            props.darkMode === "Dark"
+            props.darkmode === "Dark"
               ? "text-dark font-weight-bold"
               : "text-light font-weight-bold"
           }>

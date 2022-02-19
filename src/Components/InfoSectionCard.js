@@ -5,14 +5,14 @@ export default function InfoSectionCard(props) {
   return (
     <Card
       style={{ width: "18rem" }}
-      bg={props.darkMode === "Dark" ? "light" : "dark"}
-      border={props.darkMode === "Dark" ? "light" : "dark"}
-      text={props.darkMode === "Dark" ? "light" : "dark"}
+      bg={props.darkmode === "Dark" ? "light" : "dark"}
+      border={props.darkmode === "Dark" ? "light" : "dark"}
+      text={props.darkmode === "Dark" ? "light" : "dark"}
       className='mx-auto'>
       <Card.Img className='px-2 py-2' variant='top' src={props.img} />
       <Card.Title
         className={
-          props.darkMode === "Dark"
+          props.darkmode === "Dark"
             ? "text-dark text-center"
             : "text-light text-center"
         }>
@@ -20,7 +20,7 @@ export default function InfoSectionCard(props) {
       </Card.Title>
       <Card.Text
         className={
-          props.darkMode === "Dark"
+          props.darkmode === "Dark"
             ? "text-dark text-center"
             : "text-light text-center"
         }>
