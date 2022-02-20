@@ -4,6 +4,8 @@ import Carousel from "../Components/Carousel";
 import InfoSection from "../Components/InfoSection";
 import CyanoMarkInfoList from "../Lists/CyanoMarkInfoList";
 import { Container } from "react-bootstrap";
+import QuoteRequest from "../Components/QuoteRequest";
+import MarkLogo from "../Resources/img2.jpg";
 
 export default function CyanoMark(props) {
   return (
@@ -88,6 +90,34 @@ export default function CyanoMark(props) {
           img={CyanoMarkInfoList[2].img}
         />
       </Container>
+      <Container>
+        <InfoSection
+          key={CyanoMarkInfoList[3].id}
+          class={CyanoMarkInfoList[3].class}
+          darkmode={props.darkmode}
+          language={props.language}
+          title={
+            props.language === "English"
+              ? CyanoMarkInfoList[3].titleEN
+              : props.language === "Romanian"
+              ? CyanoMarkInfoList[3].titleRO
+              : props.language === "German" && CyanoMarkInfoList[3].titleDE
+          }
+          text={
+            props.language === "English"
+              ? CyanoMarkInfoList[3].textEN
+              : props.language === "Romanian"
+              ? CyanoMarkInfoList[3].textRO
+              : props.language === "German" && CyanoMarkInfoList[3].textDE
+          }
+          img={CyanoMarkInfoList[3].img}
+        />
+      </Container>
+      <QuoteRequest
+        logo={MarkLogo}
+        language={props.language}
+        darkmode={props.darkmode}
+      />
     </div>
   );
 }

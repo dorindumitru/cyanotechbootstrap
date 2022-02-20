@@ -137,7 +137,7 @@ const CyanoWeldInfoList = [
     textEN: <SuduraLaserEN />,
     textRO: <SuduraLaserRO />,
     textDE: <SuduraLaserDE />,
-    logo: CyanoWeld1,
+    img: CyanoWeld1,
   },
   {
     id: "2",
@@ -150,8 +150,8 @@ const CyanoWeldInfoList = [
       "Sistemul CyanoWeld poate suda în plăci de inox, fier, aluminiu, alamă, oțel carbon, etc. Sudura cu fibră laser poate înlocui cu ușurință tehnicile tradiționale de sudură, nefiind nevoie de experiență sau pregătire îndelungată.",
     textDE:
       "Das CyanoWeld-System kann Edelstahl, Eisen, Aluminium, Zinn, Kohlenstoffstahl usw. schweißen. Faserlaserschweißen kann problemlos herkömmliche Schweißmethoden ersetzen, ohne große Erfahrung oder lange Schulungen.",
-    logo: CyanoWeld2,
-    style: { flexDirection: "row-reverse" },
+    img: CyanoWeld2,
+    class: "d-flex flex-column-reverse flex-lg-row-reverse py-3",
   },
   {
     id: "3",
@@ -161,7 +161,7 @@ const CyanoWeldInfoList = [
     textEN: <AdancimePenetrareEN />,
     textRO: <AdancimePenetrareRO />,
     textDE: <AdancimePenetrareDE />,
-    logo: CyanoWeld3,
+    img: CyanoWeld3,
   },
   {
     id: "4",
@@ -174,8 +174,8 @@ const CyanoWeldInfoList = [
       "Spre deosebire de metodele de sudură tradiționale, sistemele CyanoWeld generează mai puțină căldură, nu deformează elementele sudate, asigură o îmbinare foarte bună ce nu necesită procesare ulterioară, totul cu o viteză mai mult decât dublă față de metodele clasice. Singurele consumabile necesare sunt cele necesare oricărui proces de sudură și anume gaz inert, cum ar fi azotul. Operarea sistemului este una simplă, ce asigură o siguranță superioară pentru operator. Sudura laser este una foarte prietenoasa cu mediul, neavând consumabile nocive.",
     textDE:
       "Im Gegensatz zu herkömmlichen Schweißmethoden erzeugt das CyanoWeld-System weniger Wärme, verformt die geschweißten Elemente nicht, gewährleistet eine gute Verbindung, die nicht poliert werden muss, und alles mit einer Geschwindigkeit, die doppelt so hoch ist wie bei herkömmlichen Methoden. Die einzigen benötigten Verbrauchsmaterialien sind die, die bei jedem Schweißvorgang benötigt werden, und das ist Schutzgas, wie z. B. Stickstoff. Die Bedienung ist einfach, wodurch ein hoher Grad an Sicherheit für den Bediener gewährleistet wird. Faserlaserschweißen ist äußerst umweltfreundlich, da keine giftigen Verbrauchsmaterialien benötigt werden.",
-    logo: CyanoWeld4,
-    style: { flexDirection: "row-reverse" },
+    img: CyanoWeld4,
+    class: "d-flex flex-column-reverse flex-lg-row-reverse py-3",
   },
 ];
 

@@ -29,7 +29,7 @@ const InfoSection = (props) => {
               </div>
             ))}
         </div>
-        <Card.Text className='p-2'>{props.text}</Card.Text>
+        <div className='p-2'>{props.text}</div>
         {props.button && (
           <Button
             variant={props.darkmode === "Dark" ? "dark" : "light"}

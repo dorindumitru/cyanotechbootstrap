@@ -1,10 +1,8 @@
 import React, { useState, useRef } from "react";
 import emailjs from "emailjs-com";
-import { Container, Button, Form, Card } from "react-bootstrap";
-import despreLight from "../Resources/despre light.jpg";
-import despreDark from "../Resources/despre dark.png";
+import { Container, Button, Form } from "react-bootstrap";
 
-const Contact = (props) => {
+const QuoteRequest = (props) => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -46,11 +44,11 @@ const Contact = (props) => {
           console.log(result.text);
           alert(
             props.language === "English"
-              ? "You have successfully sent us a message. Thank you!"
+              ? "You have successfully sent us a quote request. Thank you!"
               : props.language === "Romanian"
-              ? "Ne-ați trimis cu succes un mesaj. Mulțumim!"
+              ? "Ne-ați trimis cu succes o cerere de ofertă. Mulțumim!"
               : props.language === "German" &&
-                "Sie haben uns erfolgreich eine Nachricht gesendet. Danke!"
+                "Sie haben uns erfolgreich eine Angebotsanfrage gesendet. Danke!"
           );
         },
         (error) => {
@@ -75,65 +73,23 @@ const Contact = (props) => {
   }
 
   return (
-    <div
-      style={{
-        height: "100vh",
-        display: "flex",
-        alignContent: "center",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-      className={props.darkmode === "Dark" ? "bg-dark" : "bg-light"}>
-      <Container>
-        <img
-          src={props.darkmode === "Dark" ? despreLight : despreDark}
-          className='pb-2 '
-          alt='contact'
-        />
+    <Container>
+      <div
+        className={
+          props.reverse === "reverse"
+            ? "d-flex py-3 flex-column-reverse flex-lg-row-reverse text-center justify-content-center align-items-center"
+            : "d-flex py-3 flex-column flex-lg-row text-center justify-content-center align-items-center"
+        }
+        style={{ gap: "10px" }}>
+        <div className='w-50 my-auto'>
+          <img className='w-100 rounded' src={props.logo} alt='Contact'></img>
+        </div>
         <div
-          style={{ gap: "30px" }}
-          className='d-flex flex-column flex-lg-row align-items-center justify-content-center'>
-          <Card
-            style={{ width: "50%" }}
-            className={
-              props.darkmode === "Dark"
-                ? "bg-light text-center text-dark p-5"
-                : "bg-dark text-center text-light p-5"
-            }>
-            <Card.Title className='text-center'>
-              {props.language === "English"
-                ? "Contact"
-                : props.language === "Romanian"
-                ? "Contact"
-                : props.language === "German" && "Kontakt"}
-            </Card.Title>
-            <Card.Text>
-              {props.language === "English"
-                ? "Contact us to talk about our systems or an eventual partnership. We offer our experience to our customers to ensure their projects realization."
-                : props.language === "Romanian"
-                ? "Luați legătura cu noi pentru a discuta despre sistemele noastre sau un eventual parterneriat. Ne punem experienta la dispozitia clientilor nostri pentru realizarea proiectelor acestora."
-                : props.language === "German" &&
-                  "Kontaktieren Sie uns, um über unsere Systeme oder eine eventuelle Partnerschaft zu sprechen. Wir bieten unseren Kunden unsere Erfahrung, um die Umsetzung ihrer Projekte zu gewährleisten."}
-            </Card.Text>
-            <Card.Text>
-              ✓
-              {props.language === "English"
-                ? "Technical consultancy in laser equipment"
-                : props.language === "Romanian"
-                ? "Consultanță tehnica în aparatură laser"
-                : props.language === "German" &&
-                  "Technische Beratung für Lasergeräte"}
-            </Card.Text>
-            <Card.Text>
-              ✓
-              {props.language === "English"
-                ? "Permanent technical support"
-                : props.language === "Romanian"
-                ? "Suport tehnic permanent"
-                : props.language === "German" &&
-                  "Fortwährender technischer Support"}
-            </Card.Text>
-          </Card>
+          className={
+            props.darkmode === "Dark"
+              ? "w-50 bg-light text-dark m-auto p-3 rounded"
+              : "w-50 bg-dark text-light m-auto p-3 rounded"
+          }>
           <Form
             ref={form}
             onSubmit={handleSubmit}
@@ -163,7 +119,7 @@ const Contact = (props) => {
             </Form.Group>
             <Form.Group
               className={props.darkmode === "Dark" ? "text-dark" : "text-light"}
-              controlId='name'>
+              controlId='lastName'>
               <Form.Control
                 as='input'
                 onChange={handleChange}
@@ -257,10 +213,10 @@ const Contact = (props) => {
                 type='textarea'
                 placeholder={
                   props.language === "English"
-                    ? "Message"
+                    ? "Version / Details"
                     : props.language === "Romanian"
-                    ? "Mesaj"
-                    : props.language === "German" && "Nachricht"
+                    ? "Versiune / Detalii"
+                    : props.language === "German" && "Ausführung / Details"
                 }
               />
             </Form.Group>
@@ -272,8 +228,9 @@ const Contact = (props) => {
             </Button>
           </Form>
         </div>
-      </Container>
-    </div>
+      </div>
+    </Container>
   );
 };
-export default Contact;
+
+export default QuoteRequest;

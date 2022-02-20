@@ -500,7 +500,7 @@ const CyanoCleanList = [
     statsRO: <CyanoCleanBackPackRO />,
     statsDE: <CyanoCleanBackPackDE />,
     galerie: "/galerie-foto",
-    logo: CyanoCleanPack,
+    img: CyanoCleanPack,
   },
   {
     id: "2",
@@ -509,7 +509,7 @@ const CyanoCleanList = [
     statsRO: <CyanoClean60RO />,
     statsDE: <CyanoClean60DE />,
     galerie: "/galerie-foto",
-    logo: CyanoClean60,
+    img: CyanoClean60,
   },
   {
     id: "3",
@@ -518,7 +518,7 @@ const CyanoCleanList = [
     statsRO: <CyanoClean80RO />,
     statsDE: <CyanoClean80DE />,
     galerie: "/galerie-foto",
-    logo: CyanoClean80,
+    img: CyanoClean80,
   },
   {
     id: "4",
@@ -527,7 +527,7 @@ const CyanoCleanList = [
     statsRO: <CyanoClean100RO />,
     statsDE: <CyanoClean100DE />,
     galerie: "/galerie-foto",
-    logo: CyanoClean100,
+    img: CyanoClean100,
   },
   {
     id: "5",
@@ -536,7 +536,7 @@ const CyanoCleanList = [
     statsRO: <CyanoClean150RO />,
     statsDE: <CyanoClean150DE />,
     galerie: "/galerie-foto",
-    logo: CyanoClean150,
+    img: CyanoClean150,
   },
   {
     id: "6",
@@ -545,7 +545,7 @@ const CyanoCleanList = [
     statsRO: <CyanoClean200RO />,
     statsDE: <CyanoClean200DE />,
     galerie: "/galerie-foto",
-    logo: CyanoClean200,
+    img: CyanoClean200,
   },
   {
     id: "7",
@@ -554,7 +554,7 @@ const CyanoCleanList = [
     statsRO: <CyanoClean300RO />,
     statsDE: <CyanoClean300DE />,
     galerie: "/galerie-foto",
-    logo: CyanoClean300,
+    img: CyanoClean300,
   },
   {
     id: "8",
@@ -563,7 +563,7 @@ const CyanoCleanList = [
     statsRO: <CyanoClean500RO />,
     statsDE: <CyanoClean500DE />,
     galerie: "/galerie-foto",
-    logo: CyanoClean500,
+    img: CyanoClean500,
   },
 ];
 

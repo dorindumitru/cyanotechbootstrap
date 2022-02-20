@@ -102,17 +102,18 @@ const CyanoCleanInfoList = [
       "Curățarea cu laser este procesul prin care contaminanți, impurități sau mizerie(ex: carbon, silicon și cauciuc) sunt curățate de pe suprafață prin folosirea iradiației laser. Aceasta este o tehnică de aplicație laser ecologică cu costuri reduse, care este utilizată pe scară largă în întreaga industrie globală. ",
     textDE:
       "Laserreinigung ist ein Prozess, durch den Verunreinigungen, Fremdkörper oder Schmutz (z. B. Kohlenstoff, Silikon und Gummi) mittels Laserbestrahlung von Oberflächen entfernt werden. Diese Lasertechnik ist umweltfreundlich und kostengünstig und wird weltweit in großem Umfang in der Industrie eingesetzt.",
-    logo: CyanoCleanBackPack,
+    img: CyanoCleanBackPack,
   },
   {
     id: "2",
+    class: "d-flex flex-column-reverse flex-lg-row-reverse py-3",
     titleEN: "Advantages:",
     titleRO: "Avantaje",
     titleDE: "Vorteile",
     textEN: <AvantajeEN />,
     textRO: <AvantajeRO />,
     textDE: <AvantajeDE />,
-    logo: CyanoClean80,
+    img: CyanoClean80,
     style: { flexDirection: "row-reverse" },
   },
   {
@@ -126,17 +127,18 @@ const CyanoCleanInfoList = [
       "CyanoClean este un produs de top in domeniul curățărilor profesionale. Acesta este un sistem ușor de operat ce poate să iși facă treaba de cum este conectat la curent, neavând nevoie de substanțe adiționale sau consumabile. ",
     textDE:
       "CyanoClean ist ein Top-Produkt im Bereich der professionellen Reinigung. Es ist ein einfach zu bedienendes System, das sofort nach dem Einstecken die Arbeit aufnehmen kann, ohne dass zusätzliche Stoffe oder Verbrauchsmaterialien benötigt werden.",
-    logo: CyanoClean150,
+    img: CyanoClean150,
   },
   {
     id: "4",
+    class: "d-flex flex-column-reverse flex-lg-row-reverse py-3",
     titleEN: "Applicability",
     titleRO: "Aplicabilitate",
     titleDE: "Anwendungsbereiche",
     textEN: <AplicabilitateEN />,
     textRO: <AplicabilitateRO />,
     textDE: <AplicabilitateDE />,
-    logo: CyanoClean200,
+    img: CyanoClean200,
     style: { flexDirection: "row-reverse" },
   },
 ];

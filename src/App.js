@@ -4,10 +4,10 @@ import "bootstrap/dist/css/bootstrap.css";
 import {
   DropdownButton,
   Nav,
+  Form,
   Navbar,
   NavDropdown,
   Dropdown,
-  Button,
 } from "react-bootstrap";
 import Acasa from "./Pages/Acasa";
 import Contact from "./Pages/Contact";
@@ -52,28 +52,25 @@ function App() {
             Cyanotech
           </Nav.Link>
         </Navbar.Brand>
-        <Button
-          type='button'
-          bg={darkmode === "Dark" ? "dark" : "light"}
-          variant={darkmode === "Dark" ? "dark" : "light"}
+        <Form.Check
+          className={darkmode === "Dark" ? "text-light" : "text-dark"}
           onClick={toggleDark}
-          className={
+          type='switch'
+          id='custom-switch'
+          label={
             darkmode === "Dark"
-              ? "btn btn-sm me-1 btn-outline-light"
-              : "btn btn-sm me-1 btn-outline-dark"
-          }>
-          {darkmode === "Dark"
-            ? language === "English"
-              ? "Light"
+              ? language === "English"
+                ? "Light"
+                : language === "Romanian"
+                ? "Luminat"
+                : language === "German" && "Leuchtend"
+              : language === "English"
+              ? "Dark"
               : language === "Romanian"
-              ? "Luminat"
-              : language === "German" && "Leuchtend"
-            : language === "English"
-            ? "Dark"
-            : language === "Romanian"
-            ? "Întunecat"
-            : language === "German" && "Dunkel"}
-        </Button>
+              ? "Întunecat"
+              : language === "German" && "Dunkel"
+          }
+        />
         <DropdownButton size='sm' title={language} className='ms-1'>
           <Dropdown.Item onClick={() => setLanguage("English")}>
             English

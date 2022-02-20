@@ -7,7 +7,6 @@ import CyanoMarkPortable from "../Resources/CyanoMark Portable.png";
 const ApplicabilityEN = () => {
   return (
     <div>
-      <h4>Applicability</h4>
       <p>
         Electronic components: resistors, chips, pcbs, keyboards, connectors
       </p>
@@ -25,7 +24,6 @@ const ApplicabilityEN = () => {
 const ApplicabilityRO = () => {
   return (
     <div>
-      <h4>Aplicabilitate</h4>
       <p>
         Componente electronice: rezistențe, cipuri, PCB-uri, tastaturi,
         conectori
@@ -44,7 +42,6 @@ const ApplicabilityRO = () => {
 const ApplicabilityDE = () => {
   return (
     <div>
-      <h4>Anwendungsbereiche</h4>
       <p>
         Elektronische Bauteile: Widerstände, Chips, Leiterplatten, Tastaturen,
         Stecker.
@@ -157,6 +154,7 @@ const CyanoMarkInfoList = [
   },
   {
     id: "4",
+    class: "d-flex flex-column-reverse flex-lg-row-reverse py-3",
     textEN: <ApplicableMetalsEN />,
     textRO: <ApplicableMetalsRO />,
     textDE: <ApplicableMetalsDE />,

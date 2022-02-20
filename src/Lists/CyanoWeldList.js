@@ -164,7 +164,7 @@ const CyanoWeldList = [
     statsRO: <CyanoWeld1000RO />,
     statsDE: <CyanoWeld1000DE />,
     galerie: "/galerie-foto",
-    logo: CyanoWeld1,
+    img: CyanoWeld1,
   },
   {
     id: "2",
@@ -173,7 +173,7 @@ const CyanoWeldList = [
     statsRO: <CyanoWeld1500RO />,
     statsDE: <CyanoWeld1500DE />,
     galerie: "/galerie-foto",
-    logo: CyanoWeld2,
+    img: CyanoWeld2,
   },
   {
     id: "3",
@@ -182,7 +182,7 @@ const CyanoWeldList = [
     statsRO: <CyanoWeld2000RO />,
     statsDE: <CyanoWeld2000DE />,
     galerie: "/galerie-foto",
-    logo: CyanoWeld3,
+    img: CyanoWeld3,
   },
 ];
 

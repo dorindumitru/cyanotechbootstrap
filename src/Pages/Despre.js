@@ -1,30 +1,36 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import Footer from "../Components/Footer";
+import despreLight from "../Resources/despre light.jpg";
+import despreDark from "../Resources/despre dark.png";
 
 export default function Despre(props) {
   return (
     <div
-      style={{ height: "100vh" }}
       className={
         props.darkmode === "Dark"
           ? "bg-dark text-center text-dark"
           : "bg-light text-center text-light"
       }>
+      <img
+        src={props.darkmode === "Dark" ? despreLight : despreDark}
+        className='pb-2'
+        alt='about'
+      />
       <Container
         className={
           props.darkmode === "Dark"
-            ? "bg-dark text-center text-dark d-flex flex-column justify-content-between"
-            : "bg-light text-center text-light d-flex flex-column justify-content-between"
+            ? "bg-dark text-center text-dark d-flex flex-column pt-5 pb-5"
+            : "bg-light text-center text-light d-flex flex-column pt-5 pb-5"
         }>
         <div
-          className='d-flex flex-column flex-md-row justify-content-between'
+          className='d-flex flex-column flex-lg-row mb-5'
           style={{ gap: "10px" }}>
           <div
             className={
               props.darkmode === "Dark"
-                ? "bg-light p-3 m-auto w-100 rounded d-flex flex-column justify-content-center align-items-center"
-                : "bg-dark p-3 m-auto w-100 rounded d-flex flex-column justify-content-center align-items-center"
+                ? "bg-light p-3 m-auto w-100 rounded d-flex flex-column "
+                : "bg-dark p-3 m-auto w-100 rounded d-flex flex-column "
             }>
             <h2>Cyanotech</h2>
             <p>
@@ -37,16 +43,14 @@ export default function Despre(props) {
             </p>
           </div>
 
-          <div
-            style={{ gap: "10px" }}
-            className='d-flex flex-column justify-content-evenly'>
+          <div style={{ gap: "10px" }} className='d-flex flex-column'>
             <div
               className={
                 props.darkmode === "Dark"
-                  ? "bg-light d-flex justify-content-evenly rounded p-3 m-auto align-items-center flex-column"
-                  : "bg-dark d-flex justify-content-evenly rounded p-3 m-auto align-items-center flex-column"
+                  ? "bg-light d-flex  rounded p-3 m-auto  flex-column"
+                  : "bg-dark d-flex  rounded p-3 m-auto  flex-column"
               }>
-              <h3 id='AboutUsTitle'>
+              <h3>
                 {props.language === "English"
                   ? "Consultancy"
                   : props.language === "Romanian"
@@ -69,7 +73,7 @@ export default function Despre(props) {
                   ? "bg-light d-flex justify-content-evenly rounded p-3 m-auto align-items-center flex-column"
                   : "bg-dark d-flex justify-content-evenly rounded p-3 m-auto align-items-center flex-column"
               }>
-              <h3 id='AboutUsTitle'>
+              <h3>
                 {props.language === "English"
                   ? "Integration"
                   : props.language === "Romanian"
@@ -95,7 +99,7 @@ export default function Despre(props) {
                   ? "bg-light d-flex justify-content-evenly rounded p-3 m-auto align-items-center flex-column"
                   : "bg-dark d-flex justify-content-evenly rounded p-3 m-auto align-items-center flex-column"
               }>
-              <h3 id='AboutUsTitle'>
+              <h3>
                 {props.language === "English"
                   ? "Training"
                   : props.language === "Romanian"
@@ -135,7 +139,7 @@ export default function Despre(props) {
             </div>
           </div>
         </div>
-        <div id='DespreFooter'>
+        <div>
           <Footer language={props.language} darkmode={props.darkmode} />
         </div>
       </Container>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./GalerieFoto.css";
 import CyanoMarkPro1 from "../Resources/Products/CyanoMark/Pro/CyanoMark 20.png";
 import CyanoMarkPro2 from "../Resources/Products/CyanoMark/Pro/CyanoMark 30.png";
 import CyanoMarkPro3 from "../Resources/Products/CyanoMark/Pro/CyanoMark 50.png";
@@ -30,6 +30,7 @@ import CyanoWeld2 from "../Resources/Products/CyanoWeld/CyanoWeld 1.png";
 import CyanoWeld3 from "../Resources/Products/CyanoWeld/CyanoWeld 2.png";
 import CyanoWeld4 from "../Resources/Products/CyanoWeld/CyanoWeld 3.png";
 import CyanoWeld5 from "../Resources/Products/CyanoWeld/CyanoWeld 4.png";
+import { Container } from "react-bootstrap";
 
 const CyanoMarkPro = [
   {
@@ -175,122 +176,127 @@ export default function GalerieFoto(props) {
   };
 
   return (
-    <div>
-      <div>
-        <h3 style={{ textAlign: "center" }}>CyanoMark Pro</h3>
-        <div className={model ? "model open" : "model"}>
-          <img src={tempImgSrc} alt='galerie foto' />
-          <p onClick={() => setModel(false)}>x</p>
+    <div
+      className={
+        props.darkmode === "Dark" ? "bg-dark text-light" : "bg-light text-dark"
+      }>
+      <Container>
+        <div>
+          <h3 style={{ textAlign: "center" }}>CyanoMark Pro</h3>
+          <div className={model ? "model open" : "model"}>
+            <img src={tempImgSrc} alt='galerie foto' />
+            <p onClick={() => setModel(false)}>x</p>
+          </div>
+          <div className='GalerieFoto'>
+            {CyanoMarkPro.map((item, index) => {
+              return (
+                <div
+                  className='pics'
+                  key={index}
+                  onClick={() => getImg(item.img)}>
+                  <img
+                    src={item.img}
+                    alt='Images gallery'
+                    style={{ width: "100%" }}
+                  />
+                </div>
+              );
+            })}
+          </div>
         </div>
-        <div className='GalerieFoto'>
-          {CyanoMarkPro.map((item, index) => {
-            return (
-              <div
-                className='pics'
-                key={index}
-                onClick={() => getImg(item.img)}>
-                <img
-                  src={item.img}
-                  alt='Images gallery'
-                  style={{ width: "100%" }}
-                />
-              </div>
-            );
-          })}
+        <div>
+          <h3 style={{ textAlign: "center" }}>CyanoMark Mini</h3>
+          <div className={model ? "model open" : "model"}>
+            <img src={tempImgSrc} alt='galerie foto' />
+            <p onClick={() => setModel(false)}>x</p>
+          </div>
+          <div className='GalerieFoto'>
+            {CyanoMarkMini.map((item, index) => {
+              return (
+                <div
+                  className='pics'
+                  key={index}
+                  onClick={() => getImg(item.img)}>
+                  <img
+                    src={item.img}
+                    alt='Images gallery'
+                    style={{ width: "100%" }}
+                  />
+                </div>
+              );
+            })}
+          </div>
         </div>
-      </div>
-      <div>
-        <h3 style={{ textAlign: "center" }}>CyanoMark Mini</h3>
-        <div className={model ? "model open" : "model"}>
-          <img src={tempImgSrc} alt='galerie foto' />
-          <p onClick={() => setModel(false)}>x</p>
+        <div>
+          <h3 style={{ textAlign: "center" }}>CyanoMark Portable</h3>
+          <div className={model ? "model open" : "model"}>
+            <img src={tempImgSrc} alt='galerie foto' />
+            <p onClick={() => setModel(false)}>x</p>
+          </div>
+          <div className='GalerieFoto'>
+            {CyanoMarkPort.map((item, index) => {
+              return (
+                <div
+                  className='pics'
+                  key={index}
+                  onClick={() => getImg(item.img)}>
+                  <img
+                    src={item.img}
+                    alt='Images gallery'
+                    style={{ width: "100%" }}
+                  />
+                </div>
+              );
+            })}
+          </div>
         </div>
-        <div className='GalerieFoto'>
-          {CyanoMarkMini.map((item, index) => {
-            return (
-              <div
-                className='pics'
-                key={index}
-                onClick={() => getImg(item.img)}>
-                <img
-                  src={item.img}
-                  alt='Images gallery'
-                  style={{ width: "100%" }}
-                />
-              </div>
-            );
-          })}
+        <div>
+          <h3 style={{ textAlign: "center" }}>CyanoClean</h3>
+          <div className={model ? "model open" : "model"}>
+            <img src={tempImgSrc} alt='galerie foto' />
+            <p onClick={() => setModel(false)}>x</p>
+          </div>
+          <div className='GalerieFoto'>
+            {CyanoClean.map((item, index) => {
+              return (
+                <div
+                  className='pics'
+                  key={index}
+                  onClick={() => getImg(item.img)}>
+                  <img
+                    src={item.img}
+                    alt='Images gallery'
+                    style={{ width: "100%" }}
+                  />
+                </div>
+              );
+            })}
+          </div>
         </div>
-      </div>
-      <div>
-        <h3 style={{ textAlign: "center" }}>CyanoMark Portable</h3>
-        <div className={model ? "model open" : "model"}>
-          <img src={tempImgSrc} alt='galerie foto' />
-          <p onClick={() => setModel(false)}>x</p>
+        <div>
+          <h3 style={{ textAlign: "center" }}>CyanoWeld</h3>
+          <div className={model ? "model open" : "model"}>
+            <img src={tempImgSrc} alt='Images gallery' />
+            <p onClick={() => setModel(false)}>x</p>
+          </div>
+          <div className='GalerieFoto'>
+            {CyanoWeld.map((item, index) => {
+              return (
+                <div
+                  className='pics'
+                  key={index}
+                  onClick={() => getImg(item.img)}>
+                  <img
+                    src={item.img}
+                    alt='Images gallery'
+                    style={{ width: "100%" }}
+                  />
+                </div>
+              );
+            })}
+          </div>
         </div>
-        <div className='GalerieFoto'>
-          {CyanoMarkPort.map((item, index) => {
-            return (
-              <div
-                className='pics'
-                key={index}
-                onClick={() => getImg(item.img)}>
-                <img
-                  src={item.img}
-                  alt='Images gallery'
-                  style={{ width: "100%" }}
-                />
-              </div>
-            );
-          })}
-        </div>
-      </div>
-      <div>
-        <h3 style={{ textAlign: "center" }}>CyanoClean</h3>
-        <div className={model ? "model open" : "model"}>
-          <img src={tempImgSrc} alt='galerie foto' />
-          <p onClick={() => setModel(false)}>x</p>
-        </div>
-        <div className='GalerieFoto'>
-          {CyanoClean.map((item, index) => {
-            return (
-              <div
-                className='pics'
-                key={index}
-                onClick={() => getImg(item.img)}>
-                <img
-                  src={item.img}
-                  alt='Images gallery'
-                  style={{ width: "100%" }}
-                />
-              </div>
-            );
-          })}
-        </div>
-      </div>
-      <div>
-        <h3 style={{ textAlign: "center" }}>CyanoWeld</h3>
-        <div className={model ? "model open" : "model"}>
-          <img src={tempImgSrc} alt='Images gallery' />
-          <p onClick={() => setModel(false)}>x</p>
-        </div>
-        <div className='GalerieFoto'>
-          {CyanoWeld.map((item, index) => {
-            return (
-              <div
-                className='pics'
-                key={index}
-                onClick={() => getImg(item.img)}>
-                <img
-                  src={item.img}
-                  alt='Images gallery'
-                  style={{ width: "100%" }}
-                />
-              </div>
-            );
-          })}
-        </div>
-      </div>
+      </Container>
     </div>
   );
 }

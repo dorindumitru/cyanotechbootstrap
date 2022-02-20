@@ -1,4 +1,5 @@
 import React from "react";
+import { Card, Container } from "react-bootstrap";
 
 const CyanoMarkVideos = [
   {
@@ -408,67 +409,100 @@ const CyanoWeldVideos = [
   },
 ];
 
-export default function GalerieVideo() {
+export default function GalerieVideo(props) {
   return (
-    <>
-      <h2>CyanoMark</h2>
-      <div id='GalerieVideo'>
-        {CyanoMarkVideos.map((item, index) => {
-          return (
-            <div id={index} className='Video'>
-              <iframe
-                width='400'
-                height='250'
-                src={item.url}
-                title='YouTube video player'
-                frameborder='0'
-                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen'
-                allowfullscreen></iframe>
-              <h2>{item.title}</h2>
-              <p>{item.description}</p>
-            </div>
-          );
-        })}
-      </div>
-      <h2>CyanoClean</h2>
-      <div id='GalerieVideo'>
-        {CyanoCleanVideos.map((item, index, title, description) => {
-          return (
-            <div id={index} className='Video'>
-              <iframe
-                className='Iframe'
-                // width='300'
-                // height='315'
-                src={item.url}
-                title='YouTube video player'
-                frameborder='0'
-                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen'
-                allowfullscreen></iframe>
-              <h2>{item.title}</h2>
-              <p>{item.description}</p>
-            </div>
-          );
-        })}
-      </div>
-      <h2>CyanoWeld</h2>
-      <div id='GalerieVideo'>
-        {CyanoWeldVideos.map((item, index, title, description) => {
-          return (
-            <div id={index} className='Video'>
-              <iframe
-                width='560'
-                height='315'
-                src={item.url}
-                title='YouTube video player'
-                frameborder='0'
-                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen'
-                allowfullscreen></iframe>
-              <h2>{item.title}</h2>
-              <p>{item.description}</p>
-            </div>
-          );
-        })}
-      </div>
-    </>
+    <div
+      className={
+        props.darkmode === "Dark" ? "bg-dark text-light" : "bg-light text-dark"
+      }>
+      <Container className='p-2'>
+        <h2 className='text-center pt-5'>CyanoMark</h2>
+        <div className='d-flex flex-wrap'>
+          {CyanoMarkVideos.map((item) => {
+            return (
+              <Card
+                className={
+                  props.darkmode === "Dark"
+                    ? "bg-light text-dark m-2 d-flex flex-column justify-content-center align-items-center"
+                    : "bg-dark text-light m-2 d-flex flex-column justify-content-center align-items-center"
+                }
+                style={{ width: "400px" }}
+                key={item.id}>
+                <Card.Header variant='top'>
+                  <iframe
+                    width='400'
+                    height='250'
+                    src={item.url}
+                    title='YouTube video player'
+                    frameBorder='0'
+                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen'
+                    allowFullScreen></iframe>
+                </Card.Header>
+                <Card.Title className='p-2'>{item.title}</Card.Title>
+                <Card.Text className='p-2'>{item.description}</Card.Text>
+              </Card>
+            );
+          })}
+        </div>
+
+        <h2 className='text-center pt-5'>CyanoClean</h2>
+        <div className='d-flex flex-wrap'>
+          {CyanoCleanVideos.map((item) => {
+            return (
+              <Card
+                className={
+                  props.darkmode === "Dark"
+                    ? "bg-light text-dark m-2 d-flex flex-column justify-content-center align-items-center"
+                    : "bg-dark text-light m-2 d-flex flex-column justify-content-center align-items-center"
+                }
+                style={{ width: "400px" }}
+                key={item.id}>
+                <Card.Header variant='top'>
+                  <iframe
+                    width='400'
+                    height='250'
+                    src={item.url}
+                    title='YouTube video player'
+                    frameBorder='0'
+                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen'
+                    allowFullScreen></iframe>
+                </Card.Header>
+                <Card.Title className='p-2'>{item.title}</Card.Title>
+                <Card.Text className='p-2'>{item.description}</Card.Text>
+              </Card>
+            );
+          })}
+        </div>
+
+        <h2 className='text-center pt-5'>CyanoWeld</h2>
+        <div className='d-flex flex-wrap'>
+          {CyanoWeldVideos.map((item) => {
+            return (
+              <Card
+                className={
+                  props.darkmode === "Dark"
+                    ? "bg-light text-dark m-2 d-flex flex-column justify-content-center align-items-center"
+                    : "bg-dark text-light m-2 d-flex flex-column justify-content-center align-items-center"
+                }
+                style={{ width: "400px" }}
+                key={item.id}>
+                <Card.Header variant='top'>
+                  <iframe
+                    width='400'
+                    height='250'
+                    src={item.url}
+                    title='YouTube video player'
+                    frameBorder='0'
+                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen'
+                    allowFullScreen></iframe>
+                </Card.Header>
+                <Card.Title className='p-2'>{item.title}</Card.Title>
+                <Card.Text className='p-2'>{item.description}</Card.Text>
+              </Card>
+            );
+          })}
+        </div>
+      </Container>
+    </div>
   );
 }
