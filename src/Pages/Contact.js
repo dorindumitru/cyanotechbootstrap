@@ -85,11 +85,14 @@ const Contact = (props) => {
       }}
       className={props.darkmode === "Dark" ? "bg-dark" : "bg-light"}>
       <Container>
-        <img
-          src={props.darkmode === "Dark" ? despreLight : despreDark}
-          className='pb-2 '
-          alt='contact'
-        />
+        <div>
+          <img
+            src={props.darkmode === "Dark" ? despreLight : despreDark}
+            className='pb-2 '
+            style={{ objectFit: "cover", width: "100%" }}
+            alt='contact'
+          />
+        </div>
         <div
           style={{ gap: "30px" }}
           className='d-flex flex-column flex-lg-row align-items-center justify-content-center'>
