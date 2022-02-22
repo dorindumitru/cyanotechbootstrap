@@ -79,25 +79,27 @@ const Contact = (props) => {
       style={{
         height: "100vh",
         display: "flex",
+        flexDirection: "column",
+        overflow: "hidden",
         alignContent: "center",
         justifyContent: "center",
         alignItems: "center",
       }}
       className={props.darkmode === "Dark" ? "bg-dark" : "bg-light"}>
+      <div>
+        <img
+          src={props.darkmode === "Dark" ? despreLight : despreDark}
+          className='pb-2 '
+          style={{ objectFit: "cover", width: "100%" }}
+          alt='contact'
+        />
+      </div>
       <Container>
-        <div>
-          <img
-            src={props.darkmode === "Dark" ? despreLight : despreDark}
-            className='pb-2 '
-            style={{ objectFit: "cover", width: "100%" }}
-            alt='contact'
-          />
-        </div>
         <div
           style={{ gap: "30px" }}
           className='d-flex flex-column flex-lg-row align-items-center justify-content-center'>
           <Card
-            style={{ width: "50%" }}
+            // style={{ width: "50%" }}
             className={
               props.darkmode === "Dark"
                 ? "bg-light text-center text-dark p-5"

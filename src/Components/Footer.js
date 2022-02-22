@@ -79,8 +79,8 @@ const Footer = (props) => {
         ref={form}
         className={
           props.darkmode === "Dark"
-            ? "border rounded w-50 p-3 text-center bg-light"
-            : "border rounded w-50 p-3 text-center bg-dark"
+            ? "border rounded p-3 text-center bg-light"
+            : "border rounded p-3 text-center bg-dark"
         }>
         <h3 className={props.darkmode === "Dark" ? "text-dark" : "text-light"}>
           {props.language === "English"

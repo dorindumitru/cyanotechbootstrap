@@ -81,14 +81,18 @@ const QuoteRequest = (props) => {
             : "d-flex py-3 flex-column flex-lg-row text-center justify-content-center align-items-center"
         }
         style={{ gap: "10px" }}>
-        <div className='w-50 my-auto'>
-          <img className='w-100 rounded' src={props.logo} alt='Contact'></img>
+        <div className='my-auto'>
+          <img
+            style={{ maxWidth: "500px" }}
+            className='w-100 rounded'
+            src={props.logo}
+            alt='Contact'></img>
         </div>
         <div
           className={
             props.darkmode === "Dark"
-              ? "w-50 bg-light text-dark m-auto p-3 rounded"
-              : "w-50 bg-dark text-light m-auto p-3 rounded"
+              ? "bg-light text-dark m-auto p-3 rounded"
+              : "bg-dark text-light m-auto p-3 rounded"
           }>
           <Form
             ref={form}

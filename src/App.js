@@ -47,9 +47,14 @@ function App() {
           <Nav.Link
             as={Link}
             to='/'
-            style={{ color: `${darkmode === "Dark" ? "white" : "black"}` }}>
+            style={{
+              color: `${darkmode === "Dark" ? "white" : "black"}`,
+              display: "flex",
+            }}>
             <img src={logo} alt='Company Logo' height='40px' width='40px' />
-            Cyanotech
+            <p id='brandTitle' className='my-auto'>
+              Cyanotech
+            </p>
           </Nav.Link>
         </Navbar.Brand>
         <Form.Check
