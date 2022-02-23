@@ -5,11 +5,17 @@ import { Link } from "react-router-dom";
 const InfoSection = (props) => {
   return (
     <div
-      className={props.class || "d-flex flex-column flex-lg-row py-3"}
+      className={
+        props.class ||
+        "d-flex flex-column justyfi-content-center align-items-center flex-lg-row py-3"
+      }
       style={{ gap: "10px" }}>
-      <img src={props.img} alt='logo' className='w-50 mx-auto rounded' />
+      <div style={{ width: "100%", height: "100%" }}>
+        <img src={props.img} alt='logo' className='w-100 rounded' />
+      </div>
       <Card
-        className='d-flex flex-column text-center rounded justify-content-center align-items-center'
+        // style={{ maxWidth: "50%" }}
+        className='d-flex w-100 flex-column text-center rounded justify-content-center align-items-center'
         bg={props.darkmode === "Dark" ? "light" : "dark"}
         border={props.darkmode === "Dark" ? "dark" : "light"}
         text={props.darkmode === "Dark" ? "dark" : "light"}>

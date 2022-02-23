@@ -10,13 +10,21 @@ import AcasaInfoComponentList2 from "../Lists/AcasaInfoComponentList2";
 import InfoSection from "../Components/InfoSection";
 import IconSet from "../Components/IconSet";
 import Footer from "../Components/Footer";
+import HeroLight from "../Resources/hero light.png";
+import HeroDark from "../Resources/hero dark.jpg";
 
 export default function Acasa(props) {
   return (
     <div className={props.darkmode === "Dark" ? "bg-dark" : "bg-light"}>
       <div style={{ color: "white", textAlign: "center" }}>
-        <h2>Cyanotech</h2>
-        <p>
+        <img
+          className='w-100'
+          src={props.darkmode === "Dark" ? HeroDark : HeroLight}
+        />
+        <h2 className={props.darkmode === "Dark" ? "text-light" : "text-dark"}>
+          Cyanotech
+        </h2>
+        <p className={props.darkmode === "Dark" ? "text-light" : "text-dark"}>
           {props.language === "English" &&
             "Laser Marking Machines, Laser Cleaning Machines and Laser Welding Machines"}
           {props.language === "Romanian" &&
@@ -132,16 +140,18 @@ export default function Acasa(props) {
       <Container>
         <IconSet language={props.language} darkmode={props.darkmode} />
       </Container>
-      <div id='VideoSection'>
-        <video
-          id='background-video'
-          autoPlay
-          loop
-          muted
-          style={{ width: "100%", height: "50vh", objectFit: "cover" }}>
-          <source src={HoloMarking} type='video/mp4' />
-        </video>
-      </div>
+      <Container>
+        <div id='VideoSection'>
+          <video
+            id='background-video'
+            autoPlay
+            loop
+            muted
+            style={{ width: "100%", height: "50vh", objectFit: "cover" }}>
+            <source src={HoloMarking} type='video/mp4' />
+          </video>
+        </div>
+      </Container>
       <Container>
         <InfoSection
           key={AcasaInfoComponentList2[0].id}
@@ -175,9 +185,8 @@ export default function Acasa(props) {
           buttonLink='/despre'
         />
       </Container>
-      <Container>
-        <Footer language={props.language} darkmode={props.darkmode} />
-      </Container>
+
+      <Footer language={props.language} darkmode={props.darkmode} />
     </div>
   );
 }

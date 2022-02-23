@@ -7,6 +7,11 @@ import despreDark from "../Resources/despre dark.png";
 export default function Despre(props) {
   return (
     <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+      }}
       className={
         props.darkmode === "Dark"
           ? "bg-dark text-center text-dark"
@@ -15,16 +20,16 @@ export default function Despre(props) {
       <div>
         <img
           src={props.darkmode === "Dark" ? despreLight : despreDark}
-          className='pb-2'
           style={{ objectFit: "cover", width: "100%" }}
           alt='about'
+          className='my-5'
         />
       </div>
       <Container
         className={
           props.darkmode === "Dark"
-            ? "bg-dark text-center text-dark d-flex flex-column pt-5 pb-5"
-            : "bg-light text-center text-light d-flex flex-column pt-5 pb-5"
+            ? "bg-dark text-center text-dark d-flex flex-column pt-2 pb-5 my-5"
+            : "bg-light text-center text-light d-flex flex-column pt-2 pb-5 my-5"
         }>
         <div
           className='d-flex flex-column flex-lg-row mb-5'
@@ -142,10 +147,8 @@ export default function Despre(props) {
             </div>
           </div>
         </div>
-        <div>
-          <Footer language={props.language} darkmode={props.darkmode} />
-        </div>
       </Container>
+      <Footer language={props.language} darkmode={props.darkmode} />
     </div>
   );
 }

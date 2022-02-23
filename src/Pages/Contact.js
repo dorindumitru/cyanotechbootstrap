@@ -3,6 +3,7 @@ import emailjs from "emailjs-com";
 import { Container, Button, Form, Card } from "react-bootstrap";
 import despreLight from "../Resources/despre light.jpg";
 import despreDark from "../Resources/despre dark.png";
+import Footer from "../Components/Footer";
 
 const Contact = (props) => {
   const [formData, setFormData] = useState({
@@ -77,29 +78,25 @@ const Contact = (props) => {
   return (
     <div
       style={{
-        height: "100vh",
         display: "flex",
         flexDirection: "column",
+        justifyContent: "space-between",
         overflow: "hidden",
-        alignContent: "center",
-        justifyContent: "center",
         alignItems: "center",
       }}
       className={props.darkmode === "Dark" ? "bg-dark" : "bg-light"}>
-      <div>
-        <img
-          src={props.darkmode === "Dark" ? despreLight : despreDark}
-          className='pb-2 '
-          style={{ objectFit: "cover", width: "100%" }}
-          alt='contact'
-        />
-      </div>
+      <img
+        src={props.darkmode === "Dark" ? despreLight : despreDark}
+        className='pb-5 '
+        style={{ objectFit: "cover", width: "100%" }}
+        alt='contact'
+      />
+
       <Container>
         <div
           style={{ gap: "30px" }}
-          className='d-flex flex-column flex-lg-row align-items-center justify-content-center'>
+          className='d-flex flex-column  align-items-center justify-content-center pb-5'>
           <Card
-            // style={{ width: "50%" }}
             className={
               props.darkmode === "Dark"
                 ? "bg-light text-center text-dark p-5"
@@ -271,13 +268,13 @@ const Contact = (props) => {
             </Form.Group>
             <Button
               type='submit'
-              // onSubmit={handleSubmit}
               variant={props.darkmode === "Dark" ? "dark" : "light"}>
               {submit}
             </Button>
           </Form>
         </div>
       </Container>
+      <Footer language={props.language} darkmode={props.darkmode} />
     </div>
   );
 };
