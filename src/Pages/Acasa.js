@@ -20,6 +20,7 @@ export default function Acasa(props) {
         <img
           className='w-100'
           src={props.darkmode === "Dark" ? HeroDark : HeroLight}
+          alt='hero'
         />
         <h2 className={props.darkmode === "Dark" ? "text-light" : "text-dark"}>
           Cyanotech
