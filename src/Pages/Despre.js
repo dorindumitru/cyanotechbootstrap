@@ -17,14 +17,12 @@ export default function Despre(props) {
           ? "bg-dark text-center text-dark"
           : "bg-light text-center text-light"
       }>
-      <div>
-        <img
-          src={props.darkmode === "Dark" ? despreLight : despreDark}
-          style={{ objectFit: "cover", width: "100%" }}
-          alt='about'
-          className='my-5'
-        />
-      </div>
+      <img
+        src={props.darkmode === "Dark" ? despreLight : despreDark}
+        style={{ objectFit: "cover", width: "100%" }}
+        alt='about'
+      />
+
       <Container
         className={
           props.darkmode === "Dark"
