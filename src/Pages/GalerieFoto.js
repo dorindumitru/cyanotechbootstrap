@@ -30,7 +30,8 @@ import CyanoWeld2 from "../Resources/Products/CyanoWeld/CyanoWeld 1.png";
 import CyanoWeld3 from "../Resources/Products/CyanoWeld/CyanoWeld 2.png";
 import CyanoWeld4 from "../Resources/Products/CyanoWeld/CyanoWeld 3.png";
 import CyanoWeld5 from "../Resources/Products/CyanoWeld/CyanoWeld 4.png";
-import { Container } from "react-bootstrap";
+
+import { Container, Image, CloseButton } from "react-bootstrap";
 
 const CyanoMarkPro = [
   {
@@ -184,8 +185,12 @@ export default function GalerieFoto(props) {
         <div>
           <h3 style={{ textAlign: "center" }}>CyanoMark Pro</h3>
           <div className={model ? "model open" : "model"}>
+            <CloseButton
+              variant='white'
+              onClick={() => setModel(false)}
+              className='align-self-end p-5'
+            />
             <img src={tempImgSrc} alt='galerie foto' />
-            <p onClick={() => setModel(false)}>x</p>
           </div>
           <div className='GalerieFoto'>
             {CyanoMarkPro.map((item, index) => {
@@ -207,8 +212,12 @@ export default function GalerieFoto(props) {
         <div>
           <h3 style={{ textAlign: "center" }}>CyanoMark Mini</h3>
           <div className={model ? "model open" : "model"}>
+            <CloseButton
+              variant='white'
+              onClick={() => setModel(false)}
+              className='align-self-end p-5'
+            />
             <img src={tempImgSrc} alt='galerie foto' />
-            <p onClick={() => setModel(false)}>x</p>
           </div>
           <div className='GalerieFoto'>
             {CyanoMarkMini.map((item, index) => {
@@ -230,8 +239,12 @@ export default function GalerieFoto(props) {
         <div>
           <h3 style={{ textAlign: "center" }}>CyanoMark Portable</h3>
           <div className={model ? "model open" : "model"}>
+            <CloseButton
+              variant='white'
+              onClick={() => setModel(false)}
+              className='align-self-end p-5'
+            />
             <img src={tempImgSrc} alt='galerie foto' />
-            <p onClick={() => setModel(false)}>x</p>
           </div>
           <div className='GalerieFoto'>
             {CyanoMarkPort.map((item, index) => {
@@ -253,8 +266,12 @@ export default function GalerieFoto(props) {
         <div>
           <h3 style={{ textAlign: "center" }}>CyanoClean</h3>
           <div className={model ? "model open" : "model"}>
+            <CloseButton
+              variant='white'
+              onClick={() => setModel(false)}
+              className='align-self-end p-5'
+            />
             <img src={tempImgSrc} alt='galerie foto' />
-            <p onClick={() => setModel(false)}>x</p>
           </div>
           <div className='GalerieFoto'>
             {CyanoClean.map((item, index) => {
@@ -276,8 +293,12 @@ export default function GalerieFoto(props) {
         <div>
           <h3 style={{ textAlign: "center" }}>CyanoWeld</h3>
           <div className={model ? "model open" : "model"}>
+            <CloseButton
+              variant='white'
+              onClick={() => setModel(false)}
+              className='align-self-end p-5'
+            />
             <img src={tempImgSrc} alt='Images gallery' />
-            <p onClick={() => setModel(false)}>x</p>
           </div>
           <div className='GalerieFoto'>
             {CyanoWeld.map((item, index) => {
