@@ -39,7 +39,7 @@ function App() {
           alignItems: "center",
         }}
         collapseOnSelect
-        expand='md'
+        expand='lg'
         bg={darkmode === "Dark" ? "dark" : "light"}
         variant={darkmode === "Dark" ? "dark" : "light"}
         sticky='top'>
@@ -88,16 +88,22 @@ function App() {
           </Dropdown.Item>
         </DropdownButton>
         <Navbar.Toggle />
-        <Navbar.Collapse className='justify-content-end pe-3'>
+        <Navbar.Collapse
+          id='responsive-navbar-nav'
+          className='justify-content-end pe-3'>
           <Nav className='ml-auto'>
-            <Nav.Link as={Link} to='/' style={{ textAlign: "right" }}>
+            <Nav.Link as={Link} to='/' href='/' style={{ textAlign: "right" }}>
               {language === "English"
                 ? "Home"
                 : language === "Romanian"
                 ? "Acasă"
                 : language === "German" && "Startseite"}
             </Nav.Link>
-            <Nav.Link as={Link} to='/despre' style={{ textAlign: "right" }}>
+            <Nav.Link
+              as={Link}
+              to='/despre'
+              href='/despre'
+              style={{ textAlign: "right" }}>
               {language === "English"
                 ? "About us"
                 : language === "Romanian"
@@ -117,18 +123,21 @@ function App() {
               <NavDropdown.Item
                 as={Link}
                 to='/cyanomark'
+                href='/cyanomark'
                 style={{ textAlign: "right" }}>
                 CyanoMark
               </NavDropdown.Item>
               <NavDropdown.Item
                 as={Link}
                 to='/cyanoclean'
+                href='/cyanoclean'
                 style={{ textAlign: "right" }}>
                 CyanoClean
               </NavDropdown.Item>
               <NavDropdown.Item
                 as={Link}
                 to='/cyanoweld'
+                href='/cyanoweld'
                 style={{ textAlign: "right" }}>
                 CyanoWeld
               </NavDropdown.Item>
@@ -136,6 +145,7 @@ function App() {
             <Nav.Link
               as={Link}
               to='/galerie-foto'
+              href='/galerie-foto'
               style={{ textAlign: "right" }}>
               {language === "English"
                 ? "Photo Gallery"
@@ -146,6 +156,7 @@ function App() {
             <Nav.Link
               as={Link}
               to='/galerie-video'
+              href='/galerie-video'
               style={{ textAlign: "right" }}>
               {language === "English"
                 ? "Video Gallery"
@@ -153,7 +164,11 @@ function App() {
                 ? "Galerie Video"
                 : language === "German" && "Videogallerie"}
             </Nav.Link>
-            <Nav.Link as={Link} to='/contact' style={{ textAlign: "right" }}>
+            <Nav.Link
+              as={Link}
+              to='/contact'
+              href='/contact'
+              style={{ textAlign: "right" }}>
               {language === "English"
                 ? "Contact"
                 : language === "Romanian"

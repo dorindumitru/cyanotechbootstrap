@@ -31,7 +31,7 @@ import CyanoWeld3 from "../Resources/Products/CyanoWeld/CyanoWeld 2.png";
 import CyanoWeld4 from "../Resources/Products/CyanoWeld/CyanoWeld 3.png";
 import CyanoWeld5 from "../Resources/Products/CyanoWeld/CyanoWeld 4.png";
 
-import { Container, Image, CloseButton } from "react-bootstrap";
+import { Container, CloseButton } from "react-bootstrap";
 
 const CyanoMarkPro = [
   {
@@ -188,7 +188,7 @@ export default function GalerieFoto(props) {
             <CloseButton
               variant='white'
               onClick={() => setModel(false)}
-              className='align-self-end p-5'
+              className='align-self-end p-2'
             />
             <img src={tempImgSrc} alt='galerie foto' />
           </div>
