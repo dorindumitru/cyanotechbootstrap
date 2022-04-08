@@ -18,6 +18,7 @@ import Despre from "./Pages/Despre";
 import GalerieFoto from "./Pages/GalerieFoto";
 import GalerieVideo from "./Pages/GalerieVideo";
 import Produse from "./Pages/Produse";
+import Admin from "./Pages/Admin";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import React, { useState } from "react";
 
@@ -215,6 +216,10 @@ function App() {
         <Route
           path='contact'
           element={<Contact language={language} darkmode={darkmode} />}
+        />
+        <Route
+          path='admin'
+          element={<Admin language={language} darkmode={darkmode} />}
         />
       </Routes>
     </Router>

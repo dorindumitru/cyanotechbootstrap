@@ -31,6 +31,7 @@ const Contact = (props) => {
       };
     });
   }
+
   const form = useRef();
   function handleSubmit(e) {
     e.preventDefault();
